@@ -9,17 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var progress: UIProgressView!
+    @IBOutlet var level: UILabel!
+    @IBOutlet var button: UIButton!
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
+    private let game = GameController()
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+    }
 
+    func updateUI() {
+        level.text = game.currentLevelDisplay
+        progress.progress = game.progress
+    }
 
+    @IBAction func incrementProgress(_ sender: Any) {
+        if game.tap() && !game.active {
+            // Game over
+        }
+        updateUI()
+    }
 }
-
