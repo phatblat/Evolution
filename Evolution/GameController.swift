@@ -12,6 +12,7 @@ class GameController {
     var active = true
     var currentLevel = 0
     var progress: Float = 0.0
+    var tapCount = 0
 
     /// Level displayed to user starts at 1
     var currentLevelDisplay: String { get {
@@ -44,6 +45,7 @@ class GameController {
     func tap() -> Bool {
         guard active else { return false }
 
+        tapCount += 1
         progress += currentLevelIncrementAmount
         debugPrint("progress increased to \(progress)")
 
