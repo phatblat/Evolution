@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var progress: UIProgressView!
     @IBOutlet var level: UILabel!
     @IBOutlet var button: UIButton!
+    @IBOutlet var creature: UIImageView!
 
     private let game = GameController()
 
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
 
     /// Updates the UI
     func updateUI() {
+        creature.image = UIImage(named: "Evo\(game.currentLevel + 1)")
         level.text = game.currentLevelDisplay
         progress.progress = game.progress
     }
@@ -39,6 +41,9 @@ class ViewController: UIViewController {
     func endGame() {
         // Disable the button
         button.isEnabled = false
+
+        // Final evolution
+        creature.image = UIImage(named: "Evo15Final")
 
         let alert = UIAlertController(
             title: "Game Over",
