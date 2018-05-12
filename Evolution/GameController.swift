@@ -50,12 +50,12 @@ class GameController {
         debugPrint("progress increased to \(progress)")
 
         if progress >= 1 {
-            // next level
-            currentLevel += 1
-            if currentLevel > levelDifficulty.count {
+            if currentLevel == levelDifficulty.count - 1 {
                 active = false
                 return true
             }
+            // next level
+            currentLevel += 1
             progress = 0.0
             return true
         }

@@ -30,15 +30,19 @@ class ViewController: UIViewController {
     @IBAction func incrementProgress(_ sender: Any) {
         if game.tap() && !game.active {
             // Game over
+            endGame()
         }
         updateUI()
     }
 
     /// Announces the end of the game.
     func endGame() {
+        // Disable the button
+        button.isEnabled = false
+
         let alert = UIAlertController(
             title: "Game Over",
-            message: "You did it! It took you \(game.tapCount) taps to beat all \(game.currentLevel) levels.",
+            message: "You did it! It took you \(game.tapCount) taps to beat all \(game.currentLevel + 1) levels.",
             preferredStyle: .alert
         )
         let action = UIAlertAction(title: "OK", style: .cancel) { (_: UIAlertAction) in
