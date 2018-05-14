@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         if game.tap() && !game.active {
             // Game over
             endGame()
+            return
         }
         updateUI()
     }
@@ -50,7 +51,7 @@ class ViewController: UIViewController {
             message: "You did it! It took you \(game.tapCount) taps to beat all \(game.currentLevel + 1) levels.",
             preferredStyle: .alert
         )
-        let action = UIAlertAction(title: "OK", style: .cancel) { (_: UIAlertAction) in
+        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
             alert.dismiss(animated:  true)
         }
         alert.addAction(action)
