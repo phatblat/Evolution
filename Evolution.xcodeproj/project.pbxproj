@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8237D8720ABBC55004AD238 /* LegendaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8237D8620ABBC55004AD238 /* LegendaryViewController.swift */; };
 		F860693220A73185000CFFFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860693120A73185000CFFFB /* AppDelegate.swift */; };
 		F860693420A73185000CFFFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860693320A73185000CFFFB /* ViewController.swift */; };
 		F860693720A73185000CFFFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F860693520A73185000CFFFB /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8237D8620ABBC55004AD238 /* LegendaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendaryViewController.swift; sourceTree = "<group>"; };
 		F860692E20A73185000CFFFB /* Evolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Evolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F860693120A73185000CFFFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F860693320A73185000CFFFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				F860696120A73654000CFFFB /* GameData.plist */,
 				F860693D20A73186000CFFFB /* Info.plist */,
 				F860693A20A73186000CFFFB /* LaunchScreen.storyboard */,
+				F8237D8620ABBC55004AD238 /* LegendaryViewController.swift */,
 				F860693520A73185000CFFFB /* Main.storyboard */,
 				F860693320A73185000CFFFB /* ViewController.swift */,
 			);
@@ -265,6 +268,7 @@
 			files = (
 				F860693420A73185000CFFFB /* ViewController.swift in Sources */,
 				F860696020A7356A000CFFFB /* GameController.swift in Sources */,
+				F8237D8720ABBC55004AD238 /* LegendaryViewController.swift in Sources */,
 				F860693220A73185000CFFFB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
