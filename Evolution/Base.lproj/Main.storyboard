@@ -70,6 +70,7 @@
                         <constraints>
                             <constraint firstItem="FiA-pl-7Ih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5D4-K6-DWo"/>
                             <constraint firstItem="FiA-pl-7Ih" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-50" id="BH7-EY-qPr"/>
+                            <constraint firstItem="plJ-Xo-jdo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="FfG-et-1nh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="FiA-pl-7Ih" secondAttribute="top" constant="-100" id="SzZ-Pn-KRr"/>
                             <constraint firstAttribute="trailing" secondItem="plJ-Xo-jdo" secondAttribute="trailing" id="eB5-PD-93H"/>
                             <constraint firstItem="oyD-FV-2Ot" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eH8-7r-CjU"/>
@@ -103,13 +104,13 @@
                                 <color key="tintColor" red="1" green="0.048345219180000003" blue="0.018647904770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Evo1" translatesAutoresizingMaskIntoConstraints="NO" id="vnr-so-zns">
-                                <rect key="frame" x="50" y="70" width="275" height="275"/>
+                                <rect key="frame" x="30" y="40" width="315" height="315"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vnr-so-zns" secondAttribute="height" multiplier="1:1" id="CLP-le-jYg"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cL0-ZC-4G6">
-                                <rect key="frame" x="50" y="332.5" width="275" height="284.5"/>
+                                <rect key="frame" x="50" y="372.5" width="275" height="284.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cL0-ZC-4G6" secondAttribute="height" multiplier="30:31" id="Fqf-pi-1K8"/>
                                 </constraints>
@@ -124,17 +125,18 @@
                             <constraint firstItem="rsg-XD-nL9" firstAttribute="trailing" secondItem="IRF-l1-eER" secondAttribute="trailing" constant="50" id="Dfb-2z-eAZ"/>
                             <constraint firstItem="rsg-XD-nL9" firstAttribute="top" secondItem="IRF-l1-eER" secondAttribute="top" constant="-100" id="FwY-6k-ryY"/>
                             <constraint firstItem="vnr-so-zns" firstAttribute="centerX" secondItem="GWJ-Yg-7pT" secondAttribute="centerX" id="KWh-RR-Zsz"/>
-                            <constraint firstItem="rsg-XD-nL9" firstAttribute="leading" secondItem="vnr-so-zns" secondAttribute="leading" constant="-50" id="PF9-vp-Dy9"/>
+                            <constraint firstItem="rsg-XD-nL9" firstAttribute="leading" secondItem="vnr-so-zns" secondAttribute="leading" constant="-30" id="PF9-vp-Dy9"/>
                             <constraint firstItem="IRF-l1-eER" firstAttribute="centerX" secondItem="GWJ-Yg-7pT" secondAttribute="centerX" id="PaF-Sg-F4e"/>
                             <constraint firstItem="cL0-ZC-4G6" firstAttribute="centerX" secondItem="GWJ-Yg-7pT" secondAttribute="centerX" id="WQc-dD-9s7"/>
-                            <constraint firstItem="rsg-XD-nL9" firstAttribute="top" secondItem="vnr-so-zns" secondAttribute="top" constant="-50" id="aD0-kc-yC4"/>
+                            <constraint firstItem="rsg-XD-nL9" firstAttribute="top" secondItem="vnr-so-zns" secondAttribute="top" constant="-20" id="aD0-kc-yC4"/>
                             <constraint firstItem="IRF-l1-eER" firstAttribute="leading" secondItem="rsg-XD-nL9" secondAttribute="leading" constant="50" id="b5n-3o-dcB"/>
-                            <constraint firstItem="cL0-ZC-4G6" firstAttribute="bottom" secondItem="rsg-XD-nL9" secondAttribute="bottom" constant="-50" id="b7f-jh-kMU"/>
+                            <constraint firstItem="cL0-ZC-4G6" firstAttribute="bottom" secondItem="rsg-XD-nL9" secondAttribute="bottom" constant="-10" id="b7f-jh-kMU"/>
                             <constraint firstItem="cL0-ZC-4G6" firstAttribute="leading" secondItem="rsg-XD-nL9" secondAttribute="leading" constant="50" id="yWb-vP-LGm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rsg-XD-nL9"/>
                     </view>
                     <connections>
+                        <outlet property="button" destination="cL0-ZC-4G6" id="xno-GD-Uab"/>
                         <outlet property="creature" destination="vnr-so-zns" id="rf1-Pe-mBE"/>
                         <outlet property="progress" destination="IRF-l1-eER" id="10U-tI-oGI"/>
                     </connections>

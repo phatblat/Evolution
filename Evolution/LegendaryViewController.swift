@@ -18,6 +18,7 @@ class LegendaryViewController: UIViewController {
 
     @IBOutlet var progress: UIProgressView!
     @IBOutlet var creature: UIImageView!
+    @IBOutlet var button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,10 @@ class LegendaryViewController: UIViewController {
     func updateUI() {
         progress.progress = currentProgress
         if currentProgress >= 1 {
+            progress.isHidden = true
             creature.isHidden = false
-            creature.image = UIImage(named: "LEGEND_Evo")
+            creature.image = #imageLiteral(resourceName: "LEGEND_Evo")
+            button.isEnabled = false
         }
     }
 
