@@ -16,6 +16,11 @@ class ViewController: UIViewController {
 
     private let game = GameController()
 
+
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        debugPrint("\(String(describing: segue.identifier)) \(segue.destination)")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()

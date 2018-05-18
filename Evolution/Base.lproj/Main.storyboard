@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,27 +20,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="FiA-pl-7Ih">
-                                <rect key="frame" x="50" y="120" width="275" height="447"/>
+                                <rect key="frame" x="50" y="120" width="275" height="395"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-3f-dMG">
-                                        <rect key="frame" x="0.0" y="0.0" width="275" height="2.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="2"/>
                                         <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="trackTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsD-Wz-qnY">
-                                        <rect key="frame" x="0.0" y="62.5" width="275" height="23"/>
+                                        <rect key="frame" x="0.0" y="62" width="275" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UM-NH-1iR">
-                                        <rect key="frame" x="0.0" y="145.5" width="275" height="23"/>
+                                        <rect key="frame" x="0.0" y="142.5" width="275" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3z-Fq-azc">
-                                        <rect key="frame" x="0.0" y="228.5" width="275" height="218.5"/>
+                                        <rect key="frame" x="0.0" y="223" width="275" height="172"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="g3z-Fq-azc" secondAttribute="height" multiplier="1:1" id="1fz-SS-QBc"/>
+                                        </constraints>
                                         <state key="normal" image="Button"/>
                                         <connections>
                                             <action selector="incrementProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FMu-df-SFS"/>
@@ -47,8 +51,15 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plJ-Xo-jdo">
+                                <rect key="frame" x="144" y="292.5" width="231" height="30"/>
+                                <state key="normal" title="Try to get the legendary evolution"/>
+                                <connections>
+                                    <segue destination="nlb-DS-vYd" kind="presentation" id="Hg5-Ey-4eQ"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Evo1" translatesAutoresizingMaskIntoConstraints="NO" id="oyD-FV-2Ot">
-                                <rect key="frame" x="175" y="467" width="200" height="200"/>
+                                <rect key="frame" x="175" y="415" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="j7N-K5-xUW"/>
                                     <constraint firstAttribute="height" constant="200" id="tHW-38-cX4"/>
@@ -59,10 +70,13 @@
                         <constraints>
                             <constraint firstItem="FiA-pl-7Ih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5D4-K6-DWo"/>
                             <constraint firstItem="FiA-pl-7Ih" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-50" id="BH7-EY-qPr"/>
+                            <constraint firstItem="plJ-Xo-jdo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="FfG-et-1nh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="FiA-pl-7Ih" secondAttribute="top" constant="-100" id="SzZ-Pn-KRr"/>
+                            <constraint firstAttribute="trailing" secondItem="plJ-Xo-jdo" secondAttribute="trailing" id="eB5-PD-93H"/>
                             <constraint firstItem="oyD-FV-2Ot" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eH8-7r-CjU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FiA-pl-7Ih" secondAttribute="bottom" constant="100" id="iex-M9-pSp"/>
                             <constraint firstItem="oyD-FV-2Ot" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lXe-hZ-G6x"/>
+                            <constraint firstItem="plJ-Xo-jdo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zZC-Cm-VER"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -77,9 +91,64 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Legendary View Controller-->
+        <scene sceneID="b6I-H5-rpZ">
+            <objects>
+                <viewController id="nlb-DS-vYd" customClass="LegendaryViewController" customModule="Evolution" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GWJ-Yg-7pT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IRF-l1-eER">
+                                <rect key="frame" x="50" y="120" width="275" height="2"/>
+                                <color key="tintColor" red="1" green="0.048345219180000003" blue="0.018647904770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Evo1" translatesAutoresizingMaskIntoConstraints="NO" id="vnr-so-zns">
+                                <rect key="frame" x="30" y="40" width="315" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vnr-so-zns" secondAttribute="height" multiplier="1:1" id="CLP-le-jYg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cL0-ZC-4G6">
+                                <rect key="frame" x="50" y="372.5" width="275" height="284.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cL0-ZC-4G6" secondAttribute="height" multiplier="30:31" id="Fqf-pi-1K8"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="red-button"/>
+                                <connections>
+                                    <action selector="tap:" destination="nlb-DS-vYd" eventType="touchUpInside" id="U8B-Tj-2kJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rsg-XD-nL9" firstAttribute="trailing" secondItem="IRF-l1-eER" secondAttribute="trailing" constant="50" id="Dfb-2z-eAZ"/>
+                            <constraint firstItem="rsg-XD-nL9" firstAttribute="top" secondItem="IRF-l1-eER" secondAttribute="top" constant="-100" id="FwY-6k-ryY"/>
+                            <constraint firstItem="vnr-so-zns" firstAttribute="centerX" secondItem="GWJ-Yg-7pT" secondAttribute="centerX" id="KWh-RR-Zsz"/>
+                            <constraint firstItem="rsg-XD-nL9" firstAttribute="leading" secondItem="vnr-so-zns" secondAttribute="leading" constant="-30" id="PF9-vp-Dy9"/>
+                            <constraint firstItem="IRF-l1-eER" firstAttribute="centerX" secondItem="GWJ-Yg-7pT" secondAttribute="centerX" id="PaF-Sg-F4e"/>
+                            <constraint firstItem="cL0-ZC-4G6" firstAttribute="centerX" secondItem="GWJ-Yg-7pT" secondAttribute="centerX" id="WQc-dD-9s7"/>
+                            <constraint firstItem="rsg-XD-nL9" firstAttribute="top" secondItem="vnr-so-zns" secondAttribute="top" constant="-20" id="aD0-kc-yC4"/>
+                            <constraint firstItem="IRF-l1-eER" firstAttribute="leading" secondItem="rsg-XD-nL9" secondAttribute="leading" constant="50" id="b5n-3o-dcB"/>
+                            <constraint firstItem="cL0-ZC-4G6" firstAttribute="bottom" secondItem="rsg-XD-nL9" secondAttribute="bottom" constant="-10" id="b7f-jh-kMU"/>
+                            <constraint firstItem="cL0-ZC-4G6" firstAttribute="leading" secondItem="rsg-XD-nL9" secondAttribute="leading" constant="50" id="yWb-vP-LGm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rsg-XD-nL9"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="cL0-ZC-4G6" id="xno-GD-Uab"/>
+                        <outlet property="creature" destination="vnr-so-zns" id="rf1-Pe-mBE"/>
+                        <outlet property="progress" destination="IRF-l1-eER" id="10U-tI-oGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnA-PG-DAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="133.5832083958021"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Button" width="172" height="172"/>
         <image name="Evo1" width="200" height="200"/>
+        <image name="red-button" width="530" height="530"/>
     </resources>
 </document>
