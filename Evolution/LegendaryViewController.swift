@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 class LegendaryViewController: UIViewController {
-    let totalTaps = 20
+    let totalTaps = 25000
     var currentTaps = 0
     var currentProgress: Float { get {
         return Float(currentTaps) / Float(totalTaps)
