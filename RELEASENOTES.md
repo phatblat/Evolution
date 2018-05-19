@@ -1,0 +1,2 @@
+- 🎉 Initial release!
+- Added legendary evolution. #2
