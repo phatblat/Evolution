@@ -1,2 +1,1 @@
-- 💄🐛 Resolved iPad layout issues #4, #5, #6
-- 🎲 Increased legendary taps to 25K #7
+- 💄 Fixed main progress bar width #10

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+## 1.0.2
+
+- 💄 Fixed main progress bar width #10
 
 ## 1.0.1
 
